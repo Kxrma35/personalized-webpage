@@ -41,3 +41,14 @@ function greet(name, age) {
   greeting.textContent = `Hello, ${name}! Welcome to this page.`;
   ageInMonths.textContent = `Your age in months: ${months}`;
 }
+
+// Motivational quotes
+function showQuotes() {
+  quotesContainer.innerHTML = "";
+  for (let i = 0; i < 5; i++) {
+    const q = document.createElement("p");
+    q.textContent = quotes[i % quotes.length]; // cycles through array
+    q.className = "text-blue-600 font-medium italic";
+    quotesContainer.appendChild(q);
+  }
+}
